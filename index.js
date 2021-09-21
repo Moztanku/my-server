@@ -10,8 +10,8 @@ app.use(express.json());
 require('./startup/routes')(app);
 require('./startup/db')();
 
-const port = process.env.port || 3001;
-const host = process.env.host || 'localhost';
+const port = process.env.PORT || 3001;
+const host = process.env.HOST || 'localhost';
 const server = app.listen(port,host,()=>{
     logger.info(`listening on ${host}:${port}`);
 });
