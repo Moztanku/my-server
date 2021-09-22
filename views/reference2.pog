@@ -1,0 +1,11 @@
+mixin example(data)
+    .comment
+        .date= data.date
+        .author= data.author
+        .content= data.content
+
+div.
+    Nothing important
+    Just a include sample
+- const c = {date: '04-02-2018',author: 'author', content: 'content'};
++example(c)

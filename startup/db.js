@@ -11,7 +11,6 @@ module.exports = async function(){
     const options = {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        autoIndex: false,
         socketTimeoutMS: 1000
     };
     try {

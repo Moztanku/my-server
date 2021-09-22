@@ -1,14 +1,18 @@
 require('dotenv').config();
+require('express-async-errors');
 
 
 const express = require('express');
 const app = express();
+app.use(express.json());
+app.set('view engine','pug');
+
 const logger = require('./startup/logging');
 
-app.use(express.json());
+require('./startup/db')();
+
 
 require('./startup/routes')(app);
-require('./startup/db')();
 
 const port = process.env.PORT || 3001;
 const host = process.env.HOST || 'localhost';

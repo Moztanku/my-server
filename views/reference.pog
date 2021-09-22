@@ -1,0 +1,53 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="css.css")
+        style. 
+            p{
+                color: red;
+                text-decoration: underline;
+            }
+        title 404
+    body 
+        h1 404 - Page Not Found :
+        p.
+            Line #1
+            Line #2
+            Line #3
+        ul 
+            li#first.first.item item #1
+            li#second.second.item item #2
+            li#third.third.item item #3
+        input(type="password" name="inpPwd" data-js=`${ 1 > 2 ? "OK": "NOT OK!" }`)
+        - const myClasses = ['class1','class2','class3'];
+        div(class=myClasses).class4
+        - const myStyles = {"color":"black","background-color":"white"};
+        div(style=myStyles)
+        - const myAttributes = {"src":"myPhoto.png","alt":"This is my photo"};
+        img&attributes(myAttributes)
+        input(type="text" disabled)
+        - const array = [10,20,30];
+        each n,i in array
+            p= `${i}: ${n}`
+        else 
+            strong Array is empty!
+        if true 
+            p
+                | True
+        else 
+            p 
+                | False
+        - const variable = 42
+        case variable
+            when 1
+                p variable equal to #{variable}.
+            when 2
+                p variable equal to #{variable}..
+            when 3
+                p variable equal to #{variable}...
+            default
+               p variable equal to #{variable}!
+        include reference2
